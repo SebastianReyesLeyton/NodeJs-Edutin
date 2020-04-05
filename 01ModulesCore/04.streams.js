@@ -37,6 +37,6 @@ readStream
     .on('data', (chunk) => {
         console.log(`He leido: ${chunk}\n${chunk.length} caracteres.`)
     })
-on('end', () => {
-    console.log('Terminé de leer el archivo')
-})
+    .on('end', () => {
+        console.log('Terminé de leer el archivo')
+    })
