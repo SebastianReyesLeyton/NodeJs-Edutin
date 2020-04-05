@@ -22,10 +22,21 @@ let fs = require('fs'),
     readStream = fs.createReadStream('assets/names.txt'),
     writeStream = fs.createWriteStream('assets/names_copy.txt')
 
+// Version 1
 readStream.pipe(writeStream)
 readStream.on('data', (chunk) => {
     console.log(`He leido: ${chunk}\n${chunk.length} caracteres.`)
 })
 readStream.on('end', () => {
+    console.log('Terminé de leer el archivo')
+})
+
+// Version 2
+readStream.pipe(writeStream)
+readStream
+    .on('data', (chunk) => {
+        console.log(`He leido: ${chunk}\n${chunk.length} caracteres.`)
+    })
+on('end', () => {
     console.log('Terminé de leer el archivo')
 })
