@@ -19,8 +19,8 @@ Streams
 'use strict'
 
 let fs = require('fs'),
-    readStream = fs.createReadStream('assets/names.txt'),
-    writeStream = fs.createWriteStream('assets/names_copy.txt')
+    readStream = fs.createReadStream('assets/txt/names.txt'),
+    writeStream = fs.createWriteStream('assets/txt/names_copy.txt')
 
 // Version 1
 readStream.pipe(writeStream)
