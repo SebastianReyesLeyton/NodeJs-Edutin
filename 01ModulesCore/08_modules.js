@@ -1,7 +1,7 @@
 'use strict'
 
 const myData = require('./my_data'),
-    Clock = require('./clock_es6'),
+    Clock = require('./clocks/clock_es6'),
     cucu = new Clock()
 
 console.log(
